@@ -1,0 +1,82 @@
+.project {
+  padding: 54px 0;
+  .g-heading {
+    text-align: center;
+    max-width: 544px;
+    margin: 0 auto 30px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    margin-bottom: 30px;
+  }
+  &-item {
+    position: relative;
+    box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+  }
+  &-image {
+    height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  &-content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(black, 0.3);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+  }
+  &-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media screen and (min-width: 1024px) {
+    &-list {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 60px;
+    }
+  }
+}
+.subscribe {
+  width: 100%;
+  max-width: 610px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+  border-radius: 15px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  &-icon {
+    flex-shrink: 0;
+  }
+  &-field {
+    flex: 1;
+  }
+  &-input {
+    width: 100%;
+    color: #627193;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-family: "Poppins", sans-serif;
+  }
+  &-button {
+    flex-shrink: 0;
+  }
+}

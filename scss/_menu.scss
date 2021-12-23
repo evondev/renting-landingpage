@@ -1,0 +1,38 @@
+// Menu
+.menu {
+  display: flex;
+  flex-direction: column;
+  &-link {
+    color: inherit;
+    display: block;
+    transition: color 0.2s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        color: #00005c;
+      }
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translate(100%, 0);
+    &-link {
+      padding: 15px 30px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    &-link:hover {
+      color: #00005c;
+    }
+  }
+}

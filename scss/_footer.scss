@@ -1,0 +1,43 @@
+.footer {
+  background-color: #f5fafe;
+  &-top {
+    padding: 40px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-desc {
+    margin-top: 35px;
+    max-width: 224px;
+  }
+  &-heading {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &-link {
+    color: inherit;
+    display: inline-block;
+    &:hover {
+      color: #3c50e0;
+    }
+  }
+  &-bottom {
+    padding: 20px 0;
+    text-align: center;
+  }
+  @media screen and (min-width: 1024px) {
+    &-top {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &-heading {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f8ba7;
+  -webkit-tap-highlight-color: rgba(black, 0);
+  overflow-x: hidden;
+}
+
+// Heading
+.g-heading {
+  font-weight: 600;
+  color: #00005c;
+  letter-spacing: -0.015em;
+  &--big {
+    font-size: 26px;
+    line-height: calc(56 / 46);
+  }
+  &--small {
+    font-size: 20px;
+    line-height: calc(28 / 26);
+  }
+  @media screen and (min-width: 1024px) {
+    &--big {
+      font-size: 46px;
+    }
+    &--small {
+      font-size: 26px;
+    }
+  }
+}
+.g-text {
+  line-height: 167%;
+  letter-spacing: -0.01em;
+  color: #627193;
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+.box-revenue {
+  position: absolute;
+  z-index: 2;
+  box-shadow: 10px 14px 59px rgba(0, 0, 92, 0.07);
+  border-radius: 20px;
+}

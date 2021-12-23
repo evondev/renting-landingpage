@@ -1,0 +1,67 @@
+.work {
+  --w-padding: 40px;
+  --w-list-gap: 45px;
+  --w-list-mb: 70px;
+  --w-title: 20px;
+  padding: var(--w-padding) 0;
+  &-header {
+    text-align: center;
+    max-width: 623px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  &-list {
+    display: grid;
+    grid-gap: var(--w-list-gap);
+    margin-bottom: var(--w-list-mb);
+  }
+  &-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    @media (hover: hover) {
+      &:hover {
+        filter: drop-shadow(0px 40px 90px rgba(0, 0, 0, 0.14));
+      }
+    }
+  }
+  &-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 35px;
+    background-color: rgba(black, 0.8);
+    z-index: 2;
+    color: white;
+  }
+  &-item-title {
+    font-weight: 600;
+    font-size: var(--w-title);
+    line-height: 1.5;
+  }
+  &-image {
+    height: 520px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &-more {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media screen and (min-width: 1024px) {
+    --w-padding: 80px;
+    --w-title: 26px;
+    &-header {
+      margin-bottom: 80px;
+    }
+    &-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}

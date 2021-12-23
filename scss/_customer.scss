@@ -1,0 +1,68 @@
+.customer {
+  --c-padding: 55px;
+  --c-heading-mb: 40px;
+  --c-grid-gap: 30px;
+  --c-grid-columns: 1;
+  --c-name: 20px;
+  padding: var(--c-padding) 0;
+  .g-heading {
+    text-align: center;
+    max-width: 614px;
+    margin: 0 auto var(--c-heading-mb);
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(var(--c-grid-columns), 1fr);
+    grid-gap: var(--c-grid-gap);
+  }
+  &-item {
+    padding: 45px;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.2s linear;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+      }
+    }
+  }
+  &-image {
+    width: 122px;
+    height: 122px;
+    border-radius: 100rem;
+    margin-bottom: 16px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+  &-name {
+    font-size: var(--c-name);
+    margin-bottom: 5px;
+  }
+  &-job {
+    font-size: 14px;
+  }
+  &-desc {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #f5f5f5;
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    --c-padding: 85px;
+    --c-heading-mb: 80px;
+    --c-grid-gap: 60px;
+    --c-grid-columns: 3;
+  }
+}

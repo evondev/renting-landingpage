@@ -1,0 +1,131 @@
+.tools {
+  --t-padding: 45px;
+  --t-image-mb: 50px;
+  --t-title: 20px;
+  --t-text: 14px;
+  --t-content-p: 20px;
+  --t-icon: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--t-padding) 0;
+  &-content {
+    padding: var(--t-content-p);
+  }
+  &-image {
+    position: relative;
+    margin-bottom: var(--t-image-mb);
+    &-rent {
+      position: absolute;
+      top: 0;
+      right: 0;
+      box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+      border-radius: 10px;
+    }
+    &-unit {
+      position: absolute;
+      left: 10px;
+      bottom: -20px;
+      z-index: 2;
+    }
+    &-rating {
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      z-index: 2;
+      max-width: 150px;
+      box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+      border-radius: 10px;
+    }
+  }
+  &-heading,
+  &-desc {
+    margin-bottom: 10px;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+  }
+  &-item {
+    padding: 38px 0 32px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 36px;
+    background-color: transparent;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: white;
+      box-shadow: 0px 30px 120px -26px rgba(0, 0, 0, 0.09);
+      .tools-icon {
+        background-color: #3c50e0;
+        img {
+          filter: invert(10) brightness(10);
+        }
+      }
+    }
+  }
+  &-icon {
+    width: var(--t-icon);
+    height: var(--t-icon);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6ebff;
+    transition: all 0.2s linear;
+    img {
+      transition: all 0.2s linear;
+    }
+  }
+  &-info {
+    flex: 1;
+  }
+  &-title {
+    font-size: var(--t-title);
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  &-text {
+    font-size: var(--t-text);
+  }
+  @media screen and (min-width: 1024px) {
+    --t-padding: 90px;
+    --t-title: 24px;
+    --t-text: 16px;
+    --t-content-p: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &-content {
+      position: relative;
+      right: 11.11%;
+      width: 100%;
+      max-width: 520px;
+      z-index: 9;
+    }
+    &-heading {
+      max-width: 380px;
+    }
+    &-desc {
+      max-width: 333px;
+    }
+    &-item {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    &-image {
+      &-rent {
+        top: -45px;
+        right: -40px;
+      }
+      &-unit {
+        left: 90px;
+        bottom: -40px;
+      }
+      &-rating {
+        max-width: 100%;
+        right: -14px;
+      }
+    }
+  }
+}
